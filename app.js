@@ -43,10 +43,12 @@ app.use('/', Router)
 app.get('/', (req, res) => {
     res.send("안녕")
 })
-app.use('/oauth', express.urlencoded({ extended: false }), usersRouter)
-// app.use((req, res, next) => {
-//     res.status(200).send('테스트 성공')
-// })
+
+// app.use('/oauth', express.urlencoded({ extended: false }), usersRouter)
+
+app.use('/oauth', (req, res, next) => {
+    res.status(200).send('테스트 성공')
+})
 
 
 app.listen(PORT, function(){
