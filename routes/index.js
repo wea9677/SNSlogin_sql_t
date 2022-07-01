@@ -10,7 +10,7 @@ const jwt = require('jsonwebtoken')
 const { Op } = require('sequelize')
 require('dotenv').config()
 
-
+console.log(user, "이건 지나가나요?")
 router.use('/user', user)
 
 

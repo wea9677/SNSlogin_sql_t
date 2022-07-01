@@ -42,9 +42,7 @@ app.get('/', (req, res) => {
     res.send("안녕")
 })
 
-app.use((req, res, next) => {
-    res.status(200).send('테스트 성공')
-})
+
 
 app.use((err, req, res, next) => {
     console.log(err)
