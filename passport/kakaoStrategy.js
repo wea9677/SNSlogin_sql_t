@@ -19,6 +19,7 @@ module.exports = () => {
             async (accessToken, refreshToken, profile, done) => {
                 // console.log('kakao profile', profile)
                 try {
+                    console.log("지나가라 ㅠㅠ");
                     const userInfo = await Users.findAll({})
                     console.log(userInfo);
                     console.log("지나가라 ㅠㅠ");
