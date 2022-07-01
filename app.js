@@ -42,13 +42,10 @@ app.get('/', (req, res) => {
     res.send("안녕")
 })
 
-
-
-app.use((err, req, res, next) => {
-    console.log(err)
-    Logger.error(`${err.message} \n ${err.stack ? err.stack : ''} `)
-    return res.status(400).json({ success: false, message: err.message })
+app.use((req, res, next) => {
+    res.status(200).send('테스트 성공')
 })
+
 
 app.listen(PORT, function(){
     console.log('server on! http://localhost:'+ PORT);
