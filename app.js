@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: false }))
 
 passportConfig()
 app.use(passport.initialize()) // 요청 객체에 passport 설정을 심음
-app.use(passport.session()) // req.session 객체에 passport정보를 추가 저장
+// app.use(passport.session()) // req.session 객체에 passport정보를 추가 저장
 //! express-session에 의존하므로 뒤에 위치해야 함
 // app.use(passport.initialize()) // 요청 객체에 passport 설정을 심음
 // app.use(passport.session()) // req.session 객체에 passport정보를 추가 저장
