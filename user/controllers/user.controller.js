@@ -2,12 +2,14 @@ const passport = require('passport')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
-
+console.log("여기는 지나가나요?????");
 const kakaoCallback = (req, res, next) => {
+    console.log("여기는 지나가나요!!!!!");
     passport.authenticate(
         'kakao',
         { failureRedirect: '/' },
         async (err, user, info) => {
+            console.log("여기는 지나가나요");
             if (err) return next(err)
             const agent = req.headers['user-agent']
             const { userId } = user
